@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Change '0' to 'border-box' */
+  max-width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  overflow: hidden;
+}

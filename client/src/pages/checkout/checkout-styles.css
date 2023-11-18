@@ -1,0 +1,107 @@
+.checkout-user-details {
+  max-height: 250px;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 8px;
+}
+.checkout-user-details p {
+  margin-top: 20px;
+  margin-left: 0;
+  font-size: 1.3rem;
+}
+.checkout-items-container {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+  height: 100px;
+  margin-top: 10px;
+}
+.checkout-item-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.checkout-item {
+  flex: 1;
+}
+
+.checkout-item p {
+  font-size: 1.2rem;
+}
+
+.buy-now-button {
+  background-color: rgb(50, 47, 47);
+  color: #ffff;
+  font-size: 1.2rem;
+  padding: 6px;
+  border: none;
+  border-radius: 12px;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.success-purchase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 600px;
+}
+
+.success-purchase {
+  text-align: center;
+  padding: 20px;
+}
+
+.congratulations-text {
+  font-size: 24px;
+  color: #2b2929; 
+  font-weight: bold;
+  margin-bottom: 20px
+}
+
+.return-to-shop-button {
+  background-color: #262828;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.return-to-shop-button:hover {
+  background-color: #4b4f51;
+}
+
+.confetti-container {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.confetti {
+  background-color: #393835; 
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: -10px;
+  animation: confettiAnimation 3s ease-out;
+}
+
+
+@keyframes confettiAnimation {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+.confetti.animated {
+  animation: confettiAnimation 4s ease-out 1;
+}

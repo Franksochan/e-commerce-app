@@ -1,0 +1,107 @@
+.form-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.auth-form,
+.registration-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 80%;
+  margin: 50px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.username,
+.password,
+.first-name,
+.last-name,
+.address,
+.contact-number {
+  padding: 10px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.username-label,
+.password-label,
+.first-name-label,
+.last-name-label,
+.address-label,
+.contact-number-label {
+  font-size: 1.3rem;
+  margin: 5px;
+}
+
+.username-input,
+.password-input,
+.first-name-input,
+.last-name-input,
+.address-input,
+.contact-input {
+  padding: 6px 12px;
+  font-size: 1.3rem;
+  margin-right: 10px;
+  width: 100%;
+}
+
+.submit-button,
+.nav-button,
+.login-password-toggle,
+.register-password-toggle {
+  font-size: 1rem;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  background-color: black;
+  color: #ffff;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  width: 100%;
+}
+
+.nav-button {
+  font-size: 1rem;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  background-color: black;
+  color: #ffff;
+  position: relative;
+  bottom: 0;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  max-width: 200px;
+}
+
+.nav-button:hover {
+  background-color: #1d1c1c;
+}
+
+.nav-button:active {
+  background-color: black;
+}
+
+.login-password-toggle,
+.register-password-toggle {
+  font-size: 0.8rem;
+  position: sticky;
+  top: 50%;
+  right: 80%;
+  border: none;
+  background: transparent;
+  color: black;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .auth-form,
+  .registration-form {
+    max-width: 90%;
+  }
+}
