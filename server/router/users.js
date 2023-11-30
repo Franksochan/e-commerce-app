@@ -18,17 +18,26 @@ const {
 
 const verifyToken = (req, res, next) => {
   const authHeader = req.headers.authorization
-  if (authHeader) {
-    const token = authHeader.split(' ')[1]
-    jwt.verify(token, process.env.SECRET_KEY, (err) => {
-      if (err) {
-        return res.sendStatus(403)
-      }
-      next()
-    })
-  } else {
-    return res.sendStatus(401)
+
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return res.status(401).send("Unauthorized: Missing or invalid token")
   }
+
+  const token = authHeader.split(' ')[1]
+  const secretKey = process.env.SECRET_KEY
+
+  if (!secretKey) {
+    console.error("Missing secret key")
+    return res.status(500).send("Internal Server Error")
+  }
+
+  jwt.verify(token, secretKey, (err) => {
+    if (err) {
+      console.error(err)
+      return res.status(403).send("Forbidden: Token verification failed")
+    }
+    next()
+  })
 }
 
 router.post('/register', registerUser)
